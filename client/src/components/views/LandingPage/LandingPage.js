@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Typography, Row, Button } from 'antd';
 import { API_URL, API_KEY, IMAGE_BASE_URL } from '../../../Config';
 import MainImage from './Sections/MainImage';
-import GridCard from '../../commons/GridCards';
+import GridCards from '../../commons/GridCards';
 
 const { Title } = Typography;
 
@@ -87,7 +87,8 @@ function LandingPage() {
                     {Movies &&
                         Movies.map((movie, index) => (
                             <React.Fragment key={index}>
-                                <GridCard
+                                <GridCards
+                                landingPage
                                     image={
                                         movie.poster_path
                                             ? `${IMAGE_BASE_URL}w500/${movie.poster_path}`
